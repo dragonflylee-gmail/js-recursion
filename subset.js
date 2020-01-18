@@ -1,5 +1,6 @@
 function subset(a, last) {
     if (a.length == 0) {
+        // use -1 as empty set
         return [-1]
     } else {
         last = a[a.length - 1]
@@ -9,6 +10,7 @@ function subset(a, last) {
         var h = []
         g.map(x => {
             if (x == -1) {
+                // if it's empty set, then combing empty set and last element
                 h.push(last)
             } else {
                 t = []
